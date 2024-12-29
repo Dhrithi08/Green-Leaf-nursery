@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants Nursery Web Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e9f7ef;
+            color: #155724;
+        }
+        .navbar {
+            background-color: #28a745;
+        }
+        .navbar .nav-link, .navbar .navbar-brand {
+            color: white !important;
+        }
+        .card {
+            border-color: #28a745;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #28a745;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Green Leaf Nursery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-white text-center py-5" style="background-color: #28a745;">
+        <h1>Welcome to Green Leaf Plants Nursery</h1>
+        <p>Your one-stop shop for all your gardening needs!</p>
+    </header>
+
+    <div class="container my-5">
+        <div id="about" class="mb-5">
+            <h2>About Us</h2>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">A Green Paradise</h5>
+                    <p class="card-text">We are dedicated to promoting a greener and healthier environment by providing high-quality plants and gardening essentials. Our expert team is passionate about plants and always ready to help you with gardening tips and tricks to transform your space into a lush green paradise.</p>
+                    <p class="card-text">Whether you are a beginner or an experienced gardener, we have a wide range of products, including indoor plants, outdoor plants, tools, and fertilizers, to cater to all your gardening needs. Visit us and explore the beauty of nature at its best!</p>
+                </div>
+            </div>
+        </div>
+        <div id="services" class="mb-5">
+            <h2>Our Services</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Service Cards -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZGG-ThA_9qr2qvgBu2PDktaUckNuaHIO25A&s" class="card-img-top" alt="Indoor Plants">
+                        <div class="card-body">
+                            <h5 class="card-title">Indoor Plants</h5>
+                            <p class="card-text">Beautiful indoor plants to add greenery to your interiors.</p>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#indoorPlantsModal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.shutterstock.com/image-photo/herb-spiral-garden-fresh-herbs-600w-2474876893.jpg" class="card-img-top" alt="Outdoor Plants">
+                        <div class="card-body">
+                            <h5 class="card-title">Outdoor Plants</h5>
+                            <p class="card-text">A variety of outdoor plants perfect for your garden.</p>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#outdoorPlantsModal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.sowandgrow.in/cdn/shop/products/tools_1080x.png?v=1639145290" class="card-img-top" alt="Gardening Tools">
+                        <div class="card-body">
+                            <h5 class="card-title">Gardening Tools</h5>
+                            <p class="card-text">High-quality tools to make your gardening experience seamless.</p>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#gardeningToolsModal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+
+        <div id="contact" class="mb-5">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+            <div id="alertBox" class="alert alert-success mt-3 d-none" role="alert">
+                Thank you for your message! We will get back to you shortly.
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Green Leaf Plants Nursery. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Indoor Plants Modal -->
+    <div class="modal fade" id="indoorPlantsModal" tabindex="-1" aria-labelledby="indoorPlantsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="indoorPlantsModalLabel">Indoor Plants</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Indoor plants enhance the beauty of your interiors while improving air quality.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Outdoor Plants Modal -->
+    <div class="modal fade" id="outdoorPlantsModal" tabindex="-1" aria-labelledby="outdoorPlantsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="outdoorPlantsModalLabel">Outdoor Plants</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Outdoor plants are perfect for gardens, patios, and creating a natural ambiance.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gardening Tools Modal -->
+    <div class="modal fade" id="gardeningToolsModal" tabindex="-1" aria-labelledby="gardeningToolsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="gardeningToolsModalLabel">Gardening Tools</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Our gardening tools make planting, trimming, and maintaining your plants easy and enjoyable.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const alertBox = document.getElementById('alertBox');
+            alertBox.classList.remove('d-none');
+            setTimeout(() => alertBox.classList.add('d-none'), 5000);
+        });
+    </script>
+</body>
+</html>
